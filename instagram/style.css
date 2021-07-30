@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: #fafafa;
 }
 
 .header {
@@ -9,6 +10,11 @@ body {
   height: 54px;
   padding: 0 20px;
   border: solid 1px lightgrey;
+  background-color: white;
+
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 .header .logo {
   padding-top: 20px;
@@ -30,14 +36,15 @@ main {
   text-align: center;
 }
 main .story {
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  margin: 1px auto 24px;
+  margin: 57px auto 24px;
   padding-left: 20px;
 
-  width: 600px;
+  width: 580px;
   height: 118px;
 
   border: solid 1px lightgrey;
@@ -47,14 +54,23 @@ main .story .main > div {
   font-size: 12px;
 }
 main .post {
+  background-color: white;
   width: 600px;
   margin: auto;
+  margin-bottom: 32px;
 }
 main .post .post-header {
   display: flex;
   height: 28px;
   align-items: center;
   padding: 16px 16px 16px;
+
+  border: solid 1px lightgray;
+}
+
+main .post .img img {
+  width: 600px;
+  height: 614px;
 }
 
 main .post .post-header .name-menu {
@@ -74,6 +90,10 @@ main .post .post-header .name-menu .option {
 
 main .post .post-header .name-menu .name {
   font-size: 14px;
+}
+main .post .post-comment {
+  border: solid 1px lightgray;
+  border-top: none;
 }
 
 main .post .post-comment .icons {
@@ -123,10 +143,22 @@ main .post .post-comment .Enter-comment .text {
   border: none;
   outline: none;
   width: 80%;
+
+  font-weight: bold;
 }
 
 main .post .post-comment .Enter-comment .push {
   font-size: 14px;
   margin-left: auto;
   color: lightskyblue;
+}
+
+::placeholder {
+  color: lightgrey;
+}
+
+@media (min-width: 640px) {
+  main .story {
+    margin-top: 87px;
+  }
 }
