@@ -1,7 +1,8 @@
+html,
 body {
-  position: relative;
   overflow: hidden;
   margin: 0;
+  height: 100%;
 }
 
 header {
@@ -110,4 +111,92 @@ header .menu-in .whole div {
   width: 1920px;
   height: 20px;
   background-color: white;
+}
+
+.banner {
+  position: absolute;
+  width: 100%;
+  top: 70%;
+  text-align: center;
+}
+
+.banner div {
+  width: 1200px;
+  margin: 0 auto;
+  letter-spacing: -1px;
+}
+
+.banner h2 {
+  font-size: 40px;
+}
+
+.banner ul {
+  display: flex;
+
+  font-size: 16px;
+  list-style: none;
+  padding: 0;
+  border-top: solid 1px grey;
+  border-bottom: solid 1px grey;
+}
+
+.banner ul li a {
+  display: inline-block;
+  line-height: 60px;
+  text-decoration: none;
+  color: inherit;
+}
+.banner ul li a:hover {
+  color: #007fa8;
+}
+.banner ul li:nth-child(1) {
+  width: 125px;
+  height: 60px;
+}
+
+.banner ul li:nth-child(2) {
+  width: 125px;
+  height: 60px;
+}
+.banner ul li:nth-child(3) {
+  width: 192px;
+  height: 60px;
+}
+.banner ul li:nth-child(4) {
+  width: 180px;
+  height: 60px;
+}
+.banner ul li:nth-child(5) {
+  width: 80px;
+  height: 60px;
+}
+.banner ul li:nth-child(6) {
+  width: 211px;
+  height: 60px;
+}
+.banner ul li:nth-child(7) {
+  width: 160px;
+  height: 60px;
+}
+.banner ul li:nth-child(8) {
+  width: 90px;
+  height: 40px;
+  margin-top: 10px;
+  background-color: #e4dcd3;
+  border-radius: 20px;
+
+  position: relative;
+}
+
+.banner ul li:nth-child(8) img {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  line-height: 60px;
+}
+
+.banner ul li:nth-child(8) span {
+  position: absolute;
+  left: 50%;
+  top: -10px;
 }
