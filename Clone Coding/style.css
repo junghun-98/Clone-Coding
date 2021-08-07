@@ -1,14 +1,20 @@
 html,
 body {
-  overflow: hidden;
   margin: 0;
   height: 100%;
+}
+
+.maincontents {
+  overflow: hidden;
+  width: 100%;
+  height: 510px;
+  position: relative;
 }
 
 header {
   position: relative;
   min-width: 1280px;
-  margin: 0;
+  top: 0;
   width: 100%;
   height: 110px;
   z-index: 2;
@@ -84,15 +90,13 @@ header .menu-in .whole div {
   border: solid 1px white;
 }
 
-.container span {
+.container .arrow {
   position: absolute;
   display: inline-block;
   width: 32px;
   height: 20px;
-  top: 490px;
-  left: 37.5%;
-
-  background: url(/Image/www_tamraev_com/main_slider_arrow.png);
+  bottom: 0;
+  left: 746px;
 }
 
 .container span::after {
@@ -114,7 +118,6 @@ header .menu-in .whole div {
 }
 
 .banner {
-  position: absolute;
   width: 100%;
   top: 70%;
   text-align: center;
@@ -136,8 +139,8 @@ header .menu-in .whole div {
   font-size: 16px;
   list-style: none;
   padding: 0;
-  border-top: solid 1px grey;
-  border-bottom: solid 1px grey;
+  border-top: solid 1px #e4dcd3;
+  border-bottom: solid 1px #e4dcd3;
 }
 
 .banner ul li a {
@@ -199,4 +202,121 @@ header .menu-in .whole div {
   position: absolute;
   left: 50%;
   top: -10px;
+}
+.plus {
+  margin-top: 50px;
+  padding-bottom: 100px;
+}
+.plus ul {
+  display: flex;
+  width: 1200px;
+  height: 384px;
+  margin: 24px auto;
+  padding: 0;
+}
+.plus ul li {
+  float: left;
+  margin-right: 24px;
+  list-style: none;
+}
+.plus a {
+  display: inline-block;
+}
+.plus a img {
+  width: 384px;
+  height: 384px;
+}
+
+.plus .H {
+  width: auto;
+  margin-top: 64px;
+}
+.plus .more {
+  width: 50px;
+  height: 60px;
+  display: block;
+  font-size: 16px;
+  font-family: "hh_r";
+  margin: 40px auto 0;
+  padding: 0;
+  padding-top: 40px;
+  box-sizing: border-box;
+
+  background-color: white;
+  border: none;
+
+  position: relative;
+}
+
+.plus .more::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 32px;
+  height: 2px;
+  top: 25%;
+  left: 18%;
+  background-color: black;
+}
+
+.plus .more::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 2px;
+  height: 32px;
+  background-color: black;
+  left: 47%;
+  top: 0;
+}
+
+footer {
+  width: 100%;
+  height: 280px;
+  padding: 60px 0 60px 0;
+  box-sizing: border-box;
+  background-color: #303030;
+  text-align: center;
+}
+
+footer ul {
+  padding: 0;
+  margin: 36px auto;
+  list-style: none;
+  font-size: 18px;
+  color: #888888;
+}
+
+footer ul li {
+  position: relative;
+}
+footer ul li,
+a {
+  display: inline-block;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: inherit;
+  margin: 0 20px 0 20px;
+}
+
+footer ul li a::after {
+  position: absolute;
+  top: 50%;
+  bottom: 2px;
+  right: -5px;
+  content: "";
+  display: block;
+  width: 3px;
+  height: 3px;
+  background-color: #888888;
+}
+
+footer ul li:nth-child(5) a::after {
+  display: none;
+}
+footer copyright {
+  font-size: 14px;
+  color: #707070;
 }
