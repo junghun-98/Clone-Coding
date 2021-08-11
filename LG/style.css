@@ -158,15 +158,16 @@ header .bottom .search {
 }
 .vision .image {
   padding: 0;
-  width: 1280px;
+  width: 1285px;
   height: 340px;
   display: flex;
   margin: auto;
+  justify-content: space-between;
 }
 .vision .image li {
+  width: 300px;
   list-style: none;
   text-align: center;
-  flex: 1;
 }
 .vision .image li h3 {
   font-size: 24px;
@@ -178,4 +179,98 @@ header .bottom .search {
 .vision .image li div {
   font-size: 14px;
   color: #6b6b6b;
+}
+
+.information {
+  width: 100%;
+  height: 800px;
+  display: block;
+}
+
+.information .infos {
+  max-width: 1285px;
+  height: 750px;
+  margin: auto;
+  display: flex;
+
+  box-sizing: border-box;
+}
+
+.information .infos a,
+.information .infos > div {
+  display: inline-block;
+  text-align: left;
+}
+
+.information .infos a {
+  padding: 25px 20px 0 20px;
+  box-sizing: border-box;
+}
+.information .infos .right {
+  width: 100%;
+  height: 750px;
+  position: relative;
+
+  font-size: 26px;
+  font-weight: 600;
+}
+.information .infos .right a {
+  color: #ffffff;
+}
+.information .infos .top,
+.bottom {
+  display: flex;
+  width: 720px;
+  height: 363px;
+  position: absolute;
+}
+.information .infos .top {
+  left: 0;
+  top: 0;
+}
+.information .infos .bottom {
+  left: 0;
+  bottom: 0;
+}
+
+.information .infos .about a {
+  width: 521px;
+  height: 750px;
+  display: inline-block;
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 55px;
+  background: url("/LG/Image/mobility_4-1_d.webp") no-repeat;
+}
+
+.information .infos .cockpit a,
+.future a {
+  width: 303px;
+  height: 363px;
+}
+
+.information .infos .connect a,
+.auto a {
+  width: 412px;
+  height: 363px;
+}
+
+.information .infos .cockpit a {
+  background: url("/LG/Image/mobility_4-2_d.webp") no-repeat;
+  margin: 0 25.5px 0 25.5px;
+}
+
+.information .infos .connect a {
+  background: url("/LG/Image/mobility_4-3_d.webp") no-repeat;
+}
+
+.information .infos .auto a {
+  background: url("/LG/Image/mobility_4-4_d.webp") no-repeat;
+  margin: 0 25.5px 0 25.5px;
+}
+
+.information .infos .future a {
+  background: url("/LG/Image/mobility_4-5_d.webp") no-repeat;
 }
