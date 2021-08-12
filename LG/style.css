@@ -109,7 +109,8 @@ header .bottom .search {
   font-size: 18px;
   margin: 15px 0 30px 0;
 }
-.ground .inner a {
+.ground .inner a,
+.global a {
   display: inline-block;
   width: 160px;
   height: 45px;
@@ -123,7 +124,8 @@ header .bottom .search {
   border-radius: 3px;
   transition: all 0.2s ease;
 }
-.ground .inner a:hover {
+.ground .inner a:hover,
+.global a:hover {
   filter: brightness(1.2);
 }
 
@@ -165,7 +167,7 @@ header .bottom .search {
   justify-content: space-between;
 }
 .vision .image li {
-  width: 300px;
+  width: 303px;
   list-style: none;
   text-align: center;
 }
@@ -177,6 +179,8 @@ header .bottom .search {
   line-height: 32px;
 }
 .vision .image li div {
+  height: 72px;
+  line-height: 24px;
   font-size: 14px;
   color: #6b6b6b;
 }
@@ -185,6 +189,7 @@ header .bottom .search {
   width: 100%;
   height: 800px;
   display: block;
+  margin-top: 120px;
 }
 
 .information .infos {
@@ -218,7 +223,7 @@ header .bottom .search {
   color: #ffffff;
 }
 .information .infos .top,
-.bottom {
+.information .infos .bottom {
   display: flex;
   width: 720px;
   height: 363px;
@@ -273,4 +278,40 @@ header .bottom .search {
 
 .information .infos .future a {
   background: url("/LG/Image/mobility_4-5_d.webp") no-repeat;
+}
+
+.global {
+  width: 100%;
+  height: 381px;
+  margin-top: 50px;
+  background: url("/LG/Image/contact.webp") no-repeat;
+  background-size: 100%;
+
+  padding: 85px 0 0 118px;
+  box-sizing: border-box;
+}
+.global div,
+.global h2 {
+  width: 390px;
+  font-weight: 600;
+  color: #ffffff;
+}
+.global .text1 {
+  height: 30px;
+  line-height: 30px;
+  font-size: 30px;
+}
+
+.global .text2 {
+  height: 60px;
+  margin: 10px 0 20px 0;
+  line-height: 60px;
+  font-size: 54px;
+}
+
+.global a {
+  width: 140px;
+  height: 45px;
+  font-size: 14px;
+  text-align: center;
 }
