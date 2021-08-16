@@ -315,3 +315,162 @@ header .bottom .search {
   font-size: 14px;
   text-align: center;
 }
+
+.component {
+  width: 100%;
+  height: 373px;
+  text-align: center;
+  margin: 100px 0 0 0;
+}
+
+.component h2 {
+  font-size: 44px;
+  font-weight: 600;
+  height: 56px;
+  line-height: 56px;
+  margin: 0;
+}
+
+.component div {
+  font-size: 16px;
+  height: 24px;
+  line-height: 24px;
+  margin: 15px 0 35px 0;
+}
+
+.component .more {
+  display: flex;
+  list-style: none;
+  width: 976px;
+  height: 144px;
+
+  padding: 0;
+  margin: auto;
+}
+
+.component .more li {
+  flex: 1;
+  display: inline-block;
+  height: 125px;
+  text-align: center;
+}
+.component .more li a {
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+  display: block;
+}
+.component .more li a::after {
+  content: "  "
+    url("https://www.lg.com/lg5-common-gp/images/common/icons/link-right-nightrider.svg");
+}
+.component li:nth-child(1)::before {
+  content: url("/LG/Image/icon_pressrelease_d.png");
+}
+
+.component li:nth-child(2)::before {
+  content: url("/LG/Image/icon_morestories_d.png");
+}
+
+.component li:nth-child(3)::before {
+  content: url("/LG/Image/icon_linkedin_d.png");
+}
+
+.component li:nth-child(4)::before {
+  content: url("/LG/Image/icon_youtube_d.png");
+}
+
+.under {
+  width: 100%;
+  height: 638px;
+}
+
+.under .upper {
+  width: 100%;
+  height: 535px;
+  background-color: #f5f5f5;
+}
+
+.under .upper .announcement1,
+.under .upper .region {
+  height: 70px;
+  line-height: 70px;
+  border-bottom: solid 1px #e4e4e4;
+}
+
+.under .upper .announcement2 {
+  height: 110px;
+  border-bottom: solid 1px #e4e4e4;
+  line-height: 20px;
+  padding: 25px 0 25px 0;
+  box-sizing: border-box;
+}
+.under .upper > div {
+  width: 1284px;
+  margin: auto;
+}
+
+.under .upper .announcement1,
+.announcement2 {
+  font-size: 13px;
+  word-spacing: -2px;
+  color: #6b6b6b;
+}
+
+.under .upper .region {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.under .upper .region .icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("/LG/Image/lg.png") no-repeat;
+  background-size: 20px 20px;
+  transform: translateY(5px);
+  margin-right: 9px;
+}
+
+.under .upper .region .text:hover {
+  display: inline;
+  text-decoration: underline solid 2px;
+}
+
+.under .upper .list {
+  display: flex;
+  padding: 30px 0 50px 0;
+  box-sizing: border-box;
+  line-height: 24px;
+  font-size: 15px;
+}
+.under .upper .list a:hover {
+  display: inline;
+  text-decoration: underline solid 2px;
+}
+.under .upper .list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.under .upper .list div {
+  border-right: solid 1px #e4e4e4;
+  height: 202px;
+  line-height: 24px;
+  flex: 1;
+}
+.under .upper .list div:nth-child(1) ul {
+  padding-bottom: 25px;
+}
+.under .upper .list div:nth-child(2) ul:nth-child(1) {
+  margin-bottom: 20px;
+}
+.under .upper .list div:nth-child(2) ul,
+.under .upper .list div:nth-child(3) ul {
+  padding-left: 25px;
+  box-sizing: border-box;
+}
+.under .upper .list li {
+  margin-bottom: 8px;
+}
