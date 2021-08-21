@@ -4,6 +4,7 @@ body {
   width: 100%;
   height: 100%;
   font-family: "LG Smart", "Segoe UI", "Microsoft Sans Serif", sans-serif;
+  overflow: auto;
 }
 header {
   padding: 0 30px 0 30px;
@@ -36,7 +37,10 @@ header ul {
   padding: 0;
   font-weight: 700;
   width: 100%;
-  font-size: 13px;
+  font-size: 14px;
+}
+header ul a {
+  color: #333333;
 }
 header ul .top {
   display: flex;
@@ -62,6 +66,9 @@ header .bottom ul {
   line-height: 50px;
   justify-content: space-between;
 }
+header .bottom ul .none {
+  display: none;
+}
 header .bottom ul li {
   display: inline-block;
   padding-right: 22px;
@@ -69,6 +76,9 @@ header .bottom ul li {
 header .bottom ul li a:hover {
   color: #a50034;
   border-bottom: solid 2px #a50034;
+}
+header .bottom .none a:hover {
+  color: #a50034;
 }
 
 header .bottom ul li a {
@@ -83,6 +93,7 @@ header .bottom .search {
 
 .ground {
   height: 850px;
+  width: 100%;
   background: url("/LG/Image/mobility_1_d.webp") no-repeat;
   background-size: 100%;
   padding-top: 82px;
@@ -99,6 +110,7 @@ header .bottom .search {
 .ground .inner h2 {
   margin: 0;
   height: 120px;
+  size: 100%;
   line-height: 60px;
   font-size: 55px;
   font-weight: 600;
@@ -130,7 +142,6 @@ header .bottom .search {
 }
 
 .vision {
-  width: 100%;
   height: 610px;
   margin-top: 105px;
   box-sizing: border-box;
@@ -138,7 +149,7 @@ header .bottom .search {
 
 .vision .goal {
   text-align: center;
-  max-width: 1600px;
+  width: 100%;
   margin-bottom: 40px;
 }
 
@@ -158,16 +169,22 @@ header .bottom .search {
   height: 72px;
   line-height: 24px;
 }
+
 .vision .image {
-  padding: 0;
-  width: 1285px;
+  padding: 0 30px 0 30px;
+  width: 100%;
   height: 340px;
+  box-sizing: border-box;
   display: flex;
   margin: auto;
   justify-content: space-between;
 }
+.vision .image img {
+  max-width: 100%;
+  height: auto;
+}
 .vision .image li {
-  width: 303px;
+  min-width: auto;
   list-style: none;
   text-align: center;
 }

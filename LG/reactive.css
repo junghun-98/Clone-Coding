@@ -1,0 +1,34 @@
+@media (max-width: 1300px) {
+  body {
+    overflow-x: hidden;
+  }
+  header .bottom ul div:nth-child(2) {
+    display: none;
+  }
+  header .bottom ul .none {
+    display: block;
+  }
+
+  .ground .inner h2 {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 1007px) {
+  .ground {
+    height: 1465px;
+    padding-top: 60px;
+    background: url("/LG/Image/mobility_1_m.webp") no-repeat;
+    background-size: 100%;
+  }
+  .ground .inner h2 {
+    height: 70px;
+    line-height: 35px;
+    font-size: 35px;
+  }
+  .ground .inner div {
+    height: 16px;
+    line-height: 16px;
+    font-size: 16px;
+  }
+}
