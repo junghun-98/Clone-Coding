@@ -87,14 +87,12 @@ header .more a:hover div:nth-child(2) {
 }
 
 .con .image1 {
-  background: url("/OLGODA/www_poscochemical_com/main_visual_bg01.jpg")
-    no-repeat;
+  background: url("/www_poscochemical_com/main_visual_bg01.jpg") no-repeat;
   background-size: auto 100%;
 }
 
 .con .image2 {
-  background: url("/OLGODA/www_poscochemical_com/main_visual_bg02.jpg")
-    no-repeat;
+  background: url("/www_poscochemical_com/main_visual_bg02.jpg") no-repeat;
   background-size: auto 100%;
   animation: ani 5s linear alternate infinite;
 }
@@ -126,4 +124,46 @@ header .more a:hover div:nth-child(2) {
   font-weight: 600;
   text-align: left;
   color: white;
+}
+.business h2 {
+  font-size: 55px;
+  font-weight: 700;
+  text-align: center;
+  margin: 90px 0 90px 0;
+}
+.business .kind {
+  display: flex;
+  width: 100%;
+  height: 800px;
+}
+.business .kind .material {
+  flex: 1;
+  height: auto;
+  overflow: visible;
+  transition: 0.7s;
+  position: relative;
+}
+.business .kind .material a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.business .kind .battery {
+  background: url("/www_poscochemical_com/business_top_visual1_m.jpg") no-repeat;
+  background-size: 100% auto;
+}
+.business .kind .battery:hover,
+.business .kind .chemistry:hover,
+.business .kind .foundation:hover {
+  flex: 1.2;
+}
+.business .kind .chemistry {
+  background: url("/www_poscochemical_com/business_top_visual3_m.jpg") no-repeat;
+  background-size: 100% auto;
+  z-index: 1;
+}
+.business .kind .foundation {
+  background: url("/www_poscochemical_com/main_sec_07_img02.png") no-repeat;
+  background-size: auto 100%;
 }
