@@ -125,6 +125,9 @@ header .more a:hover div:nth-child(2) {
   text-align: left;
   color: white;
 }
+.business {
+  height: 1050px;
+}
 .business h2 {
   font-size: 55px;
   font-weight: 700;
@@ -142,6 +145,7 @@ header .more a:hover div:nth-child(2) {
   overflow: visible;
   transition: 0.7s;
   position: relative;
+  overflow: hidden;
 }
 .business .kind .material a {
   display: inline-block;
@@ -166,4 +170,27 @@ header .more a:hover div:nth-child(2) {
 .business .kind .foundation {
   background: url("/www_poscochemical_com/main_sec_07_img02.png") no-repeat;
   background-size: auto 100%;
+}
+.business .kind .content {
+  position: absolute;
+  bottom: 0;
+  color: rgb(255, 255, 255);
+  transform: translateY(90px);
+  transition: 0.7s;
+}
+.business .kind .content:hover {
+  transform: translateY(-90px);
+}
+.business .kind .content h2 {
+  padding-left: 50px;
+  text-align: left;
+  font-size: 45px;
+  font-weight: 700;
+}
+.business .kind .content p {
+  padding-left: 50px;
+  font: 18px bolder;
+}
+.news {
+  background-color: black;
 }
