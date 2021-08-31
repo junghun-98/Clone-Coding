@@ -1,0 +1,7 @@
+.delpadding {
+  padding: 0;
+}
+
+.none {
+  transform: translateY(-100%);
+}

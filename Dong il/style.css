@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  height: 200vh;
+}
+header {
+  width: 100%;
+  height: 105px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  padding-top: 10px;
+  box-sizing: border-box;
+  transition: 0.2s;
+  z-index: 10;
+}
+ul,
+a {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  padding: 0;
+  margin: 0;
+}
+.headerinner,
+.headerinner .menu,
+.headerinner .menu .menuinner,
+.headerinner .menu .menuinner ul,
+.headerinner .menu .menuinner .icon {
+  display: flex;
+  align-items: center;
+}
+
+.headerinner {
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  box-sizing: border-box;
+}
+
+.headerinner svg {
+  margin-left: 3em;
+}
+.headerinner .menu {
+  width: 40%;
+  height: 100%;
+  margin-right: 3em;
+}
+.headerinner .menu .menuinner {
+  width: 100%;
+  height: 100%;
+}
+.headerinner .menu .menuinner ul {
+  width: 80%;
+  height: 100%;
+  justify-content: space-around;
+}
+.headerinner .menu .menuinner ul li {
+  height: 100%;
+}
+.headerinner .menu .menuinner ul li a {
+  display: inline-flex;
+  height: 100%;
+  align-items: center;
+  transition: 0.5s;
+  border-bottom: solid 2px rgba(0, 0, 0, 0);
+}
+.headerinner .menu .menuinner ul li a:hover {
+  border-bottom-color: rgba(0, 0, 0, 1);
+}
+
+.headerinner .menuinner .icon .fas {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.visual {
+  width: 100%;
+  height: 755px;
+}
+.visual .every {
+  position: relative;
+}
+.visual .every,
+.visual .container,
+.visual .container .mainimage {
+  width: 100%;
+  height: 100%;
+}
+.visual .container,
+.visual .container .mainimage,
+.visual .container .coment {
+  position: absolute;
+}
+.visual .container .mainimage {
+  height: 45%;
+  overflow: hidden;
+  bottom: 0;
+  background: url("/dongil82_co_kr/main-visual-003-1903x954.jpg") no-repeat;
+  background-position: center 100%;
+  background-size: 1520px auto;
+}
+.visual .container {
+  top: 0;
+}
+.visual .container h2 {
+  font-size: 110px;
+  font-weight: 700;
+  line-height: 121px;
+  margin-bottom: 40px;
+}
+.visual .container p {
+  font-size: 23px;
+  font-weight: 500;
+}
+.visual .container .coment {
+  top: 17%;
+  left: 5%;
+}
+.visual .every .play {
+  width: 230px;
+  height: 20px;
+  position: absolute;
+  left: 5%;
+  bottom: 20%;
+  color: #888888;
+}
+
+@keyframes change {
+  from {
+    background-position: right bottom;
+  }
+  to {
+    background-position: left bottom;
+  }
+}
+.visual .every .play span {
+  display: inline-block;
+  width: 160px;
+  height: 3px;
+  margin-bottom: 4px;
+  background-color: #888888;
+  background: linear-gradient(to right, black 50%, #888888 50%);
+  background-size: 200% 100%;
+  animation: change 8s linear infinite;
+}
+.visual .every .play .fas {
+  cursor: pointer;
+}
