@@ -5,3 +5,10 @@
 .none {
   transform: translateY(-100%);
 }
+.visable {
+  animation: visaul-ani 1s forwards;
+}
+
+.uppon {
+  animation: up-ani 1s forwards;
+}

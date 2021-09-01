@@ -98,17 +98,48 @@ a {
 .visual .container .coment {
   position: absolute;
 }
-.visual .container .mainimage {
-  height: 45%;
-  overflow: hidden;
-  bottom: 0;
+.visual .every .first .mainimage {
+  background: url("/dongil82_co_kr/main-visual-001-1-1903x954.jpg") no-repeat;
+}
+.visual .every .second .mainimage {
+  background: url("/dongil82_co_kr/main-visual-02-1903x954.jpg") no-repeat;
+}
+.visual .every .third .mainimage {
   background: url("/dongil82_co_kr/main-visual-003-1903x954.jpg") no-repeat;
+}
+.visual .every .container .mainimage {
+  height: 45%;
+  bottom: 0;
   background-position: center 100%;
   background-size: 1520px auto;
 }
+@keyframes visaul-ani {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .visual .container {
   top: 0;
+
+  /* animation: visaul-ani 1s infinite; */
 }
+.visual .mainimage {
+  opacity: 0;
+}
+
+@keyframes up-ani {
+  from {
+    transform: translateY(130%);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .visual .container h2 {
   font-size: 110px;
   font-weight: 700;
@@ -117,11 +148,28 @@ a {
 }
 .visual .container p {
   font-size: 23px;
-  font-weight: 500;
+  font-weight: 600;
 }
+
 .visual .container .coment {
   top: 17%;
   left: 5%;
+  z-index: 10;
+}
+.visual .container .coment > div {
+  overflow: hidden;
+}
+.visual .container .coment h2 {
+  transform: translateY(105%);
+}
+.visual .container .coment p {
+  transform: translateY(130%);
+}
+
+.visual .container .coment h2,
+.visual .container .coment p {
+  /* animation: up-ani 1s forwards infinite; */
+  opacity: 0;
 }
 .visual .every .play {
   width: 230px;

@@ -3,21 +3,13 @@
     let lastPos = 0;
 
     function toggleNone(pos, last, elem){
-        
         // up
         if(last >= pos){
             elem.classList.remove('none');
-            console.log('up');
-            console.log('p:' + pos);
-            console.log('l:' + last);
         }
         // down
         else{
             elem.classList.add('none');
-            console.log('down');
-
-            console.log('p:' + pos);
-            console.log('l:' + last);
         }
     }
 
@@ -45,6 +37,46 @@
         lastPos = posY;
     }
     
-    window.addEventListener('scroll', scrollHandler);
+    document.addEventListener('scroll', scrollHandler);
     
+})();
+
+(function(){
+    const parent = document.querySelector('.every');
+
+    const images = document.querySelectorAll('.mainimage');
+    const comentsH = document.querySelectorAll('.coment h2');
+    const comentsP = document.querySelectorAll('.coment p');
+
+    console.log(comentsH);
+
+    let currentimg = images[0];
+    let currentcomH= comentsH[0];
+    let currentcomP= comentsP[0];
+
+    let i = 0;
+
+    images[0].classList.add('visable');
+    comentsH[0].classList.add('uppon');
+    comentsP[0].classList.add('uppon');
+
+    function changeVisual(){
+        i++;
+        if(i > 2){
+            i = 0;
+        }
+        currentimg.classList.remove('visable');
+        currentcomH.classList.remove('uppon');
+        currentcomP.classList.remove('uppon');
+
+        currentimg = images[i];
+        currentcomH = comentsH[i];
+        currentcomP = comentsP[i];
+
+        currentimg.classList.add('visable');
+        currentcomH.classList.add('uppon');
+        currentcomP.classList.add('uppon');
+    }
+    
+    window.setInterval(changeVisual, 8000);
 })();
