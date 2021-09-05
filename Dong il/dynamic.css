@@ -2,3 +2,37 @@ header.down {
   padding: 0;
   background-color: white;
 }
+
+@keyframes zoomin-ani {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes zoomout-ani {
+  0% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+h2.textH2 {
+  animation: text-ani 1s forwards;
+  animation-delay: 1s;
+}
+p.textP {
+  animation: text-ani 1s forwards;
+  animation-delay: 1s;
+}
+.image.zoomin {
+  animation: zoomin-ani 1s forwards;
+}
+.image.zoomout {
+  animation: zoomout-ani 1s forwards;
+}

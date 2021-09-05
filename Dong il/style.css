@@ -54,29 +54,6 @@ header {
   transition: 0.5s;
   border-bottom: solid 2px rgba(0, 0, 0, 1);
 }
-@keyframes zoomin-ani {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: scale(2);
-  }
-}
-@keyframes zoomout-ani {
-  0% {
-    transform: scale(2);
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.main-visual {
-  position: relative;
-  width: 100%;
-  height: 754px;
-}
 
 @keyframes main-ani {
   0% {
@@ -87,6 +64,20 @@ header {
   }
 }
 
+@keyframes text-ani {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.main-visual {
+  position: relative;
+  width: 100%;
+  height: 754px;
+}
 .main-visual::before {
   position: absolute;
   display: inline-block;
@@ -105,10 +96,71 @@ header {
   height: 100%;
   top: 0;
   left: 0;
+  opacity: 0;
+  transition: 1s;
 }
 
-.main-visual .main-con .image {
+.main-visual .main-con .coment {
+  position: absolute;
+  height: 90%;
+  top: 15vw;
+  left: 50px;
+  z-index: 11;
+  transition: 1s;
+}
+
+.main-visual .main-con .coment h2 {
+  opacity: 0;
+  font-size: 7.5vw;
+  line-height: 100%;
+  margin-bottom: 50px;
+}
+.main-visual .main-con .coment p {
+  opacity: 0;
+  font-size: 1.3vw;
+}
+.main-visual .first .image {
   background: url("/dongil82_co_kr/main-visual-001-1-1903x954.jpg") no-repeat;
   background-size: auto 110%;
-  animation: zoomout-ani 1s forwards;
+}
+
+.main-visual .second .image {
+  background: url("/dongil82_co_kr/main-visual-02-1903x954.jpg") no-repeat;
+  background-size: auto 110%;
+}
+.main-visual .third .image {
+  background: url("/dongil82_co_kr/main-visual-003-1903x954.jpg") no-repeat;
+  background-size: auto 110%;
+}
+@keyframes bar-ani {
+  0% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+.main-visual .time-bar {
+  opacity: 0;
+  position: absolute;
+  top: 39vw;
+  left: 50px;
+  z-index: 11;
+  animation: text-ani 1s forwards;
+  animation-delay: 1.4s;
+}
+.main-visual .time-bar::before {
+  content: "";
+  display: inline-block;
+  width: 150px;
+  height: 3px;
+  margin-bottom: 5px;
+
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 1) 50%
+  );
+  background-size: 200%;
+  animation: bar-ani 6s infinite linear;
 }

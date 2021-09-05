@@ -1,21 +1,21 @@
-// Scroll
+// header & mainVisual
 (function(){
+    // Scroll
     const header = document.querySelector("header");
     let locate;
     let currentLocate = 0;
     let lastLocate;
 
-    function addClass(elem, addclass){
-        elem.classList.add(addclass);
+    function addClass(elem, className){
+        elem.classList.add(className);
     }
 
-    function removeClass(elem, removeclass){
-        elem.classList.remove(removeclass);
+    function removeClass(elem, className){
+        elem.classList.remove(className);
     }
 
     function scrollHandler(){
         locate = window.pageYOffset;
-        console.log(locate);
         currentLocate = locate;
 
         if(locate == 0){
@@ -37,4 +37,50 @@
     }
 
     window.addEventListener('scroll', scrollHandler);
+
+    
+    // Timing
+    const images = document.querySelectorAll('.main-visual .main-con .image');
+    const textH2 = document.querySelectorAll('.main-visual .main-con .coment h2');
+    const textP = document.querySelectorAll('.main-visual .main-con .coment p');
+
+    let currentImage = images[0];
+    let currentH2 = textH2[0];
+    let currentP = textP[0];
+
+    let i = 0;
+
+    addClass(images[0], 'zoomout');
+    addClass(textH2[0], 'textH2');
+    addClass(textP[0], 'textP');
+
+    function changeElem(){
+        i++;
+        if(i > 2){
+            i = 0;
+        }
+        addClass(currentImage, 'zoomin');
+
+        currentImage = images[i];
+        currentH2 = textH2[i];
+        currentP = textP[i];
+
+        addClass(images[i], 'zoomout');
+        addClass(textH2[i], 'textH2');
+        addClass(textP[i], 'textP');
+    }
+
+    function timingHandler(){
+        if(currentImage.classList.contains('zoomin')){
+            removeClass(currentImage, 'zoomin');
+        }
+
+        removeClass(currentImage, 'zoomout');
+        removeClass(currentH2, 'textH2');
+        removeClass(currentP, 'textP');
+        
+        changeElem();
+    }
+    window.setInterval(timingHandler, 6000)
 })();
+
