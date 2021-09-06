@@ -149,6 +149,16 @@ header {
   animation: text-ani 1s forwards;
   animation-delay: 1.4s;
 }
+
+.main-visual .time-bar .fas {
+  color: #888888;
+}
+
+.main-visual .time-bar button {
+  border: none;
+  background-color: unset;
+  cursor: pointer;
+}
 .main-visual .time-bar::before {
   content: "";
   display: inline-block;

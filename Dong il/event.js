@@ -81,6 +81,29 @@
         
         changeElem();
     }
-    window.setInterval(timingHandler, 6000)
+    let visualChange = window.setInterval(timingHandler, 6000);
+    
+    //Clcik
+    const button = document.querySelector('.change-button');
+    let button_icon = document.querySelector('.change-button i');    
+
+    function changeButton(){
+        if(button_icon.classList.contains('fa-pause')){
+            removeClass(button_icon, 'fa-pause');
+            addClass(button_icon, 'fa-play');
+            clearInterval(visualChange);
+        }
+        else if(button_icon.classList.contains('fa-play')){
+            removeClass(button_icon, 'fa-play');
+            addClass(button_icon, 'fa-pause');
+            visualChange = window.setInterval(timingHandler, 6000);
+        } 
+    }
+
+    function clickHandler(){
+        changeButton();
+    }
+
+    window.addEventListener('click', clickHandler);
 })();
 
