@@ -97,7 +97,8 @@
             removeClass(button_icon, 'fa-play');
             addClass(button_icon, 'fa-pause');
             visualChange = window.setInterval(timingHandler, 6000);
-        } 
+        }
+        else return;
     }
 
     function clickHandler(){

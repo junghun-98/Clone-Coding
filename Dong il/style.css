@@ -1,9 +1,10 @@
 body {
   height: 200vh;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 header {
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
@@ -17,12 +18,13 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100vw;
+  width: 80%;
   height: 5vw;
   font-size: 1.28vw;
   font-weight: 600;
-  padding: 0 50px 0 50px;
   box-sizing: border-box;
+  max-width: 1520px;
+  margin: 0 auto;
 }
 
 .inner .menu,
@@ -76,7 +78,8 @@ header {
 .main-visual {
   position: relative;
   width: 100%;
-  height: 754px;
+  height: 100vh;
+  overflow: hidden;
 }
 .main-visual::before {
   position: absolute;
@@ -84,6 +87,7 @@ header {
   content: "";
   width: 100%;
   height: 25vw;
+  max-height: 420px;
   background-color: white;
   transform: translateY(-100%);
   animation: main-ani 2s forwards;
@@ -121,16 +125,16 @@ header {
 }
 .main-visual .first .image {
   background: url("/dongil82_co_kr/main-visual-001-1-1903x954.jpg") no-repeat;
-  background-size: auto 110%;
+  background-size: 100% 110%;
 }
 
 .main-visual .second .image {
   background: url("/dongil82_co_kr/main-visual-02-1903x954.jpg") no-repeat;
-  background-size: auto 110%;
+  background-size: 100% 110%;
 }
 .main-visual .third .image {
   background: url("/dongil82_co_kr/main-visual-003-1903x954.jpg") no-repeat;
-  background-size: auto 110%;
+  background-size: 100% 110%;
 }
 @keyframes bar-ani {
   0% {
@@ -145,6 +149,7 @@ header {
   position: absolute;
   top: 39vw;
   left: 50px;
+  transition: 1s;
   z-index: 11;
   animation: text-ani 1s forwards;
   animation-delay: 1.4s;
@@ -173,4 +178,24 @@ header {
   );
   background-size: 200%;
   animation: bar-ani 6s infinite linear;
+}
+
+.project-con {
+  max-width: 1520px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+}
+.project-con .project-title {
+  width: 24vw;
+}
+.project-con .project-image {
+  width: 66vw;
+  height: 88vw;
+  display: flex;
+  justify-content: space-around;
+}
+.project-con .project-image img {
+  width: 100%;
+  height: 90%;
 }
