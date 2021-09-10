@@ -87,7 +87,10 @@
     const button = document.querySelector('.change-button');
     let button_icon = document.querySelector('.change-button i');    
 
-    function changeButton(){
+    function changeButton(e){
+        if(!e.target.classList.contains('fas')){
+            return;
+        }
         if(button_icon.classList.contains('fa-pause')){
             removeClass(button_icon, 'fa-pause');
             addClass(button_icon, 'fa-play');
@@ -101,8 +104,8 @@
         else return;
     }
 
-    function clickHandler(){
-        changeButton();
+    function clickHandler(e){
+        changeButton(e);
     }
 
     window.addEventListener('click', clickHandler);
