@@ -1,5 +1,5 @@
-// header & mainVisual
 (function(){
+    // header & mainVisual
     // Scroll
     const header = document.querySelector("header");
     let locate;
@@ -29,7 +29,7 @@
         }
 
         if(locate > 200 && lastLocate >= currentLocate){
-            //up
+            //scroll up
             header.style.transform = 'translateY(0)';
         }
 
@@ -38,7 +38,6 @@
 
     window.addEventListener('scroll', scrollHandler);
 
-    
     // Timing
     const images = document.querySelectorAll('.main-visual .main-con .image');
     const textH2 = document.querySelectorAll('.main-visual .main-con .coment h2');
@@ -83,7 +82,7 @@
     }
     let visualChange = window.setInterval(timingHandler, 6000);
     
-    //Clcik
+    //Click
     const button = document.querySelector('.change-button');
     let button_icon = document.querySelector('.change-button i');    
 
@@ -110,4 +109,3 @@
 
     window.addEventListener('click', clickHandler);
 })();
-
